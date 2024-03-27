@@ -1,5 +1,6 @@
 [
     {
+      "id":1,
       "image": "https://i.ibb.co/j5Mnn3Q/1.png",
       "bookName": "To Kill a Mockingbird",
       "author": "Harper Lee",
@@ -11,6 +12,7 @@
       "rating": 4.5
     },
     {
+      "id":2,
       "image": "https://i.ibb.co/CnkttdL/2.png",
       "bookName": "1984",
       "author": "George Orwell",
@@ -22,6 +24,7 @@
       "rating": 4.7
     },
     {
+      "id":3,
       "image": "https://i.ibb.co/kS8jrvG/3.png",
       "bookName": "The Great Gatsby",
       "author": "F. Scott Fitzgerald",
@@ -33,6 +36,7 @@
       "rating": 4.3
     },
     {
+      "id":4,
       "image": "https://i.ibb.co/2nR86zy/5.png",
       "bookName": "Pride and Prejudice",
       "author": "Jane Austen",
@@ -44,6 +48,7 @@
       "rating": 4.8
     },
     {
+      "id":5,
       "image": "https://i.ibb.co/QrpmLJW/kindpng-7318921.png",
       "bookName": "The Catcher in the Rye",
       "author": "J. D. Salinger",
@@ -55,6 +60,7 @@
       "rating": 4.2
     },
     {
+      "id":6,
       "image": "https://i.ibb.co/Lz7fh3Z/pngwing-1-1.png",
       "bookName": "The Hobbit",
       "author": "J. R. R. Tolkien",
@@ -66,6 +72,7 @@
       "rating": 4.6
     },
     {
+      "id":7,
       "image": "https://i.ibb.co/j5Mnn3Q/1.png",
       "bookName": "Harry Potter and the Philosopher's Stone",
       "author": "J. K. Rowling",
@@ -77,6 +84,7 @@
       "rating": 4.9
     },
     {
+      "id":8,
       "image": "https://i.ibb.co/CnkttdL/2.png",
       "bookName": "The Lord of the Rings",
       "author": "J. R. R. Tolkien",
@@ -88,6 +96,7 @@
       "rating": 4.8
     },
     {
+      "id":9,
       "image": "https://i.ibb.co/kS8jrvG/3.png",
       "bookName": "Moby-Dick",
       "author": "Herman Melville",
@@ -99,6 +108,7 @@
       "rating": 4.1
     },
     {
+      "id":10,
       "image": "https://i.ibb.co/2nR86zy/5.png",
       "bookName": "The Road",
       "author": "Cormac McCarthy",
@@ -110,6 +120,7 @@
       "rating": 4.4
     },
     {
+      "id":11,
       "image": "https://i.ibb.co/CnkttdL/2.png",
       "bookName": "Brave New World",
       "author": "Aldous Huxley",
@@ -121,6 +132,7 @@
       "rating": 4.6
     },
     {
+      "id":12,
       "image": "https://i.ibb.co/j5Mnn3Q/1.png",
       "bookName": "The Alchemist",
       "author": "Paulo Coelho",
@@ -131,7 +143,7 @@
       "yearOfPublishing": 1988,
       "rating": 4.7
     },
-    {
+    {  "id":13,
       "image": "https://i.ibb.co/kS8jrvG/3.png",
       "bookName": "The Odyssey",
       "author": "Homer",
@@ -143,6 +155,7 @@
       "rating": 4.5
     },
     {
+      "id":14,
       "image": "https://i.ibb.co/j5Mnn3Q/1.png",
       "bookName": "Crime and Punishment",
       "author": "Fyodor Dostoevsky",
@@ -154,6 +167,7 @@
       "rating": 4.3
     },
     {
+      "id":15,
       "image": "https://i.ibb.co/2nR86zy/5.png",
       "bookName": "The Picture of Dorian Gray",
       "author": "Oscar Wilde",

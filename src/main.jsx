@@ -11,6 +11,7 @@ import Booklist from './Component/Booklist.jsx';
 import Readpage from './Component/Readpage.jsx';
 import Books from './CardComponent/Books.jsx';
 import Details from './Details/Details.jsx';
+import Banner from './Banner.jsx';
 
 
 const router=createBrowserRouter([
@@ -25,6 +26,10 @@ const router=createBrowserRouter([
 
       },
       {
+        path:"/",
+        element:<Banner></Banner>
+      },
+      {
         path:"/book",
         element:<Booklist></Booklist>
       },
@@ -34,8 +39,9 @@ const router=createBrowserRouter([
 
       },
       {
-        path:"/detail",
-        element:<Details />
+        path:"/detail/:id",
+        element:<Details />,
+        loader:()=>fetch("data.json")
 
       },
       {

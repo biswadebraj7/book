@@ -4,14 +4,14 @@ import { AiOutlineStar } from "react-icons/ai";
 
 function Books({books}){
     console.log(books)
-    const {image,bookName,author,category,tags,totalPages,publisher,yearOfPublishing,rating}=books;
+    const {id,image,bookName,author,category,tags,totalPages,publisher,yearOfPublishing,rating}=books;
    
     return(
         <>
         
       <div className="container mx-auto max-w-screen-lg">
         
-       <Link to="/detail">
+       <Link to={`/detail/${id}`}>
        <div className="card shadow-md">
             <div className="mx-auto">
                 <img src={image} alt="" />
