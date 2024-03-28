@@ -17,11 +17,18 @@ function Booklist(){
         if(fillter==='all'){
             setShowpost(bookread)
 
-        } else if(fillter==="rating"){
+        } else if(fillter==='rating'){
             const bookread=showpost.find(show=>show.rating==='rating')
             setShowpost(bookread)
 
+        } else if(fillter==='totalPages'){
+            const totalPagesnum=showpost.find(page=>page.totalPages==='totalPages')
+            setShowpost(bookread)
+        }else if(fillter==='yearOfPublishing'){
+            const year=showpost.find(year=>year.yearOfPublishing==='yearOfPublishing')
+            setShowpost(bookread)
         }
+
         
     }
 
@@ -56,7 +63,9 @@ function Booklist(){
                     <summary className="m-1 btn text-white bg-[#23BE0A]">Sort By</summary>
                     <ul className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52">
                         <li ><a className="text-lg font-medium" onClick={showHandle}>Rating</a></li>
-                        <li><a  className="text-lg font-medium">Wishlist</a></li>
+                        <li><a  className="text-lg font-medium" onClick={showHandle }>Year Of Publishing</a></li>
+                        <li><a  className="text-lg font-medium" onClick={showHandle }>Total Pages</a></li>
+
                     </ul>
                 </details>
                 <h1 className=" text-left font-blod text-4xl bg-green-500 p-3 w-12 rounded-xl text-green-200">{bookread.length}</h1>
