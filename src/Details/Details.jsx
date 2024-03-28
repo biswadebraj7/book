@@ -1,43 +1,68 @@
-import React from "react";
+import React, { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { useLoaderData, useParams } from "react-router-dom";
-import { AiOutlineStar } from "react-icons/ai";
+import {  applictionId } from "../Store";
+
 
 function Details(){
     const booksdata=useLoaderData();
+
     const {id}=useParams();
     const intId=parseInt(id);
     const books=booksdata.find(books=>books.id===intId)
-
     console.log(books)
+    const readhandle=()=>{
+     applictionId(id)
+        toast ("already Exsit!");
+        //alert("already exist")
+
+    }
+    const wishLislHandle=()=>{
+        applictionId(id)
+        toast ("already Exsit ! ");
+
+    }
     return(
         <>
-        <div className="container max-w-screen-lg mx-auto">
-        <div className="card shadow-md flex justify-between items-center">
-            <div className="mx-auto">
-                <img src={books.image} alt="" />
+        <div className="container max-w-screen-lg mx-auto mb-5">
+
+            <div className="card w-full  shadow-md grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 items-center">
+                <div className="lg:w-30%">
+                    <img className="h-50% w-2/4" src={books.image} alt="" />
+                   
+                </div>
+                <div className="lg:w-70%">
+                    <h1 className="text-left py-3 font-bold text-4xl">{books.bookName}</h1>
+                    <p className="text-left pb-1 font-medium text-lg">By:{books.author}</p>
+                    <hr className="py-3" />
+                    <p className="text-left font-medium text-xl">{books.category}</p>
+                    <hr className="py-3" />
+                    <p className="text-left font-normal text-base ">Review:{books.review}</p>
+                  <p className="text-left  font-bold text-lg flex py-3 gap-4 flex-start items-center">Tag#
+                  {books.tags.map(tag=> <ul className="">
+                    <li className="text-lg font-medium text-[#23BE0A]">#{tag}</li>
+                       
+                        
+                    </ul>)}
+                  </p>
+                  <hr className="py-3" />
+                  <p  className="text-left font-normal pr-2 pb-3 text-lg">Number of Pages: {books.totalPages}</p>
+                  <p  className="text-left font-normal pr-2 pb-3 text-lg">Publisher:: {books.publisher}</p>
+                  <p  className="text-left font-normal pr-2 pb-3 text-lg">Year of Publishing:: {books.yearOfPublishing}</p>
+                  <p  className="text-left font-normal pr-2 pb-3 text-lg">Year of Publishing:: {books.rating}</p>
+                   
+                    <div className="flex py-4 flex-start items-center gap-4">
+                        <button onClick={readhandle} className="btn px-7  font-semibold text-lg">Read</button>
+                        <button onClick={wishLislHandle} className="btn  font-semibold text-lg bg-[#50B1C9]">WishList</button>
+                    </div>
+
+                    
+                </div>
 
             </div>
-            <div>
-                <ul className="flex py-4 justify-between items-center pr-10">
-                    <li className="text-[#23BE0A] font-medium text-lg">{books.author.slice(0,7)}</li>
-                    <li className="text-[#23BE0A] font-medium text-lg">{books.category.slice(0,7)}</li>
-                </ul>
-                <h1 className="text-xl font-bold text-center py-4">{books.bookName.slice(0,16)}</h1>
-                
-            </div>
-            <div className="py-4">
-                <hr />
-            </div>
-            <div className="flex justify-between items-center">
-                <span>{books.tags}</span>
-               <p className="flex items-center gap-1"> {books.rating} <AiOutlineStar /></p>
-
-            </div>
-            <div>
-           
-            </div>
-
-        </div>
+              
+            <ToastContainer/>
 
         </div>
         

@@ -22,14 +22,14 @@ function Books({books}){
                     <li className="text-[#23BE0A] font-medium text-lg">{author.slice(0,7)}</li>
                     <li className="text-[#23BE0A] font-medium text-lg">{category.slice(0,7)}</li>
                 </ul>
-                <h1 className="text-xl font-bold text-center py-4">{bookName.slice(0,16)}</h1>
+                <h1 className="text-xl font-bold text-center py-4">{bookName.slice(0,14)}</h1>
                 
             </div>
             <div className="py-4">
                 <hr />
             </div>
             <div className="flex justify-between items-center">
-                <span>{tags}</span>
+                <span className="text-lg font-bold gap-1">Tag{tags}</span>
                <p className="flex items-center gap-1"> {rating} <AiOutlineStar /></p>
 
             </div>
